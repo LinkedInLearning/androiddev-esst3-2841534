@@ -16,31 +16,6 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        Log.i(LOG_TAG, "onCreate")
-    }
-
-    override fun onStart() {
-        super.onStart()
-        Log.i(LOG_TAG, "onStart")
-    }
-
-    override fun onStop() {
-        super.onStop()
-        Log.i(LOG_TAG, "onStop")
-    }
-
-    override fun onPause() {
-        super.onPause()
-        Log.i(LOG_TAG, "onPause")
-    }
-
-    override fun onResume() {
-        super.onResume()
-        Log.i(LOG_TAG, "onResume")
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        Log.i(LOG_TAG, "onDestroy")
+        lifecycle.addObserver(MyObserver())
     }
 }
