@@ -1,3 +1,14 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">Two Trees Olive Oil</string>
+    <string name="description_text">
+        Through each generation we’ve adapted and evolved, always keeping our sights set on creating
+        the highest quality olive oil, while balancing our time-honored traditions with new
+        innovative techniques.\n\n
+        We’re passionate, even obsessive, about environmental sustainability,
+        and we’re constantly looking to find ways to decrease our footprint on mother earth.\n\n
+        We also share a strong sense of community with our customers, fellow farmers, and our beloved Santa
+        Rosa neighbors who have embraced our business for many decades. Our high ethical standards
+        and well-defined values are central to everything we do.
+    </string>
+    <string name="action_settings">Settings</string>
 </resources>

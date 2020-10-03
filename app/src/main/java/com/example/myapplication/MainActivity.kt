@@ -1,11 +1,8 @@
 package com.example.myapplication
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
+import androidx.appcompat.app.AppCompatActivity
 import com.example.myapplication.databinding.ActivityMainBinding
-
-const val LOG_TAG = "lifecycle_monitor"
 
 class MainActivity : AppCompatActivity() {
 
@@ -16,6 +13,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        lifecycle.addObserver(MyObserver())
+        setSupportActionBar(binding.toolbar)
+        binding.toolbarLayout.title = getString(R.string.app_name)
     }
 }
