@@ -1,6 +1,7 @@
 package com.example.myapplication
 
 import android.os.Bundle
+import android.view.View
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.example.myapplication.databinding.ActivityMainBinding
@@ -19,14 +20,20 @@ class MainActivity : AppCompatActivity() {
         binding.toolbarLayout.title = getString(R.string.app_name)
 
         val viewModel by viewModels<MainViewModel>()
-        viewModel.loadData()
 
-        binding.fab.setOnClickListener { view ->
-            Snackbar.make(
-                view!!,
-                "Our message",
-                Snackbar.LENGTH_LONG
-            ).show()
+        viewModel.info.observe(this) {
+            displaySnackbar(it)
         }
+        binding.fab.setOnClickListener { view ->
+            viewModel.loadData()
+        }
+    }
+
+    private fun displaySnackbar(count: Int) {
+        Snackbar.make(
+            binding.root,
+            "Current value: $count",
+            Snackbar.LENGTH_LONG
+        ).show()
     }
 }
