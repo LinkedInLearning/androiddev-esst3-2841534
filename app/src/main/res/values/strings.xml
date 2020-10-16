@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string name="title_label">Take My Order</string>
+    <string name="checkout_button_label">Checkout</string>
+    <string name="total_label">Total:</string>
+    <string name="total_message">You\'ve spent %d on olives!</string>
 </resources>
