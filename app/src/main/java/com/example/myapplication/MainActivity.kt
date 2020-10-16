@@ -21,8 +21,8 @@ class MainActivity : AppCompatActivity() {
         binding.removeQuantityButton.setOnClickListener { viewModel.decreaseQuantity() }
         binding.checkoutButton.setOnClickListener { viewModel.checkout() }
 
-        viewModel.quantity.observe(this) { TODO("Not yet implemented") }
-        viewModel.totalAmount.observe(this) { TODO("Not yet implemented") }
+        viewModel.quantity.observe(this) { updateTotalCount(it) }
+        viewModel.totalAmount.observe(this) { handleCheckout(it) }
     }
 
     private fun updateTotalCount(total: Int) {

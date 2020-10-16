@@ -9,15 +9,17 @@ private const val PRICE_PER_OLIVE = 5
 class MainViewModel : ViewModel() {
 
     private val _quantity: MutableLiveData<Int> = MutableLiveData(0)
+    val quantity: LiveData<Int> = _quantity
+
     private val _totalAmount: MutableLiveData<Int> = MutableLiveData()
-    // Expose variables for use in the MainActivity => quantity, totalAmount
+    val totalAmount: LiveData<Int> = _totalAmount
 
     fun increaseQuantity() {
-        TODO("Not yet implemented")
+        _quantity.value = _quantity.value!! + 1
     }
 
     fun decreaseQuantity() {
-        TODO("Not yet implemented")
+        _quantity.value = _quantity.value!! - 1
     }
 
     fun checkout() {
