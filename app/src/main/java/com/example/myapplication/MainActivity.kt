@@ -1,7 +1,6 @@
 package com.example.myapplication
 
 import android.os.Bundle
-import android.view.View
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.example.myapplication.databinding.ActivityMainBinding
@@ -24,7 +23,7 @@ class MainActivity : AppCompatActivity() {
         viewModel.info.observe(this) {
             displaySnackbar(it)
         }
-        binding.fab.setOnClickListener { view ->
+        binding.fab.setOnClickListener {
             viewModel.loadData()
         }
     }
