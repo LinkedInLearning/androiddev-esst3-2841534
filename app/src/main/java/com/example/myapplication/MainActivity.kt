@@ -1,6 +1,7 @@
 package com.example.myapplication
 
 import android.os.Bundle
+import android.view.Menu
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.example.myapplication.databinding.ActivityMainBinding
@@ -34,5 +35,10 @@ class MainActivity : AppCompatActivity() {
             "Current value: $count",
             Snackbar.LENGTH_LONG
         ).show()
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_main, menu)
+        return super.onCreateOptionsMenu(menu)
     }
 }
