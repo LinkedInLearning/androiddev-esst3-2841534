@@ -22,10 +22,9 @@
         who’ve thrown some monumental parties and hosted a wide range of events from anniversaries,
         to charity events, to weddings, and much more.
     </string>
-    <string name="shop_header_label">Your cart’s looking pretty empty!</string>
+    <string name="shop_header_label">Your cart</string>
     <string name="shop_button_label">Continue Shopping</string>
-    <string name="cart_content">Why not make your taste buds happy by dropping in a few of our
-        tantalizing olive oil products? And don’t forget about using the coupon codes you’ll
+    <string name="cart_content">Don’t forget about using the coupon codes you’ll
         find around our website. They change frequently, but are always a great bargain… if we
         do say so ourselves. If you have any questions, don’t hesitate to reach out. We love
         helping our customers.

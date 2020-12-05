@@ -13,10 +13,10 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="64dp"
         android:layout_marginEnd="24dp"
+        android:src="@drawable/ic_outline_shopping_cart"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:src="@drawable/ic_outline_shopping_cart" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/cartHeaderText"
@@ -34,15 +34,35 @@
         app:layout_constraintTop_toBottomOf="@+id/cartImage" />
 
     <Button
-        android:id="@+id/shopButton"
-        android:layout_width="wrap_content"
+        android:id="@+id/remove_quantity_button"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="48dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
         android:backgroundTint="@color/colorAccent"
-        android:text="@string/shop_button_label"
+        android:text="-"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toStartOf="@+id/add_quantity_button"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cartContentText" />
+
+    <Button
+        android:id="@+id/add_quantity_button"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="48dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="@color/colorAccent"
+        android:text="+"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textColor="@android:color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/remove_quantity_button"
         app:layout_constraintTop_toBottomOf="@+id/cartContentText" />
 
     <TextView

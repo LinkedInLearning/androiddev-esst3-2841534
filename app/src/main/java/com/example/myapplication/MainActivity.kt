@@ -5,6 +5,7 @@ import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.add
 import androidx.fragment.app.commit
 import androidx.fragment.app.replace
+import androidx.lifecycle.ViewModelProvider
 import com.example.myapplication.databinding.ActivityMainBinding
 
 class MainActivity : FragmentActivity() {
@@ -33,6 +34,15 @@ class MainActivity : FragmentActivity() {
                 else -> false
             }
         }
+
+        val viewModel = ViewModelProvider(this)[SharedViewModel::class.java]
+        viewModel.quantity.observe(this) {
+            updateBadge(it)
+        }
+    }
+
+    private fun updateBadge(count: Int) {
+        TODO("implement the logic for showing and clearing badge count")
     }
 
     private fun goToShop(): Boolean {

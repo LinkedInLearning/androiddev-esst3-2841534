@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import com.example.myapplication.databinding.FragmentShopBinding
 
 class ShopFragment : Fragment() {
@@ -18,6 +19,17 @@ class ShopFragment : Fragment() {
     ): View? {
         _binding = FragmentShopBinding.inflate(inflater, container, false)
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val viewModel = activity?.run {
+            ViewModelProvider(this)[SharedViewModel::class.java]
+        }
+
+        binding.addQuantityButton.setOnClickListener { viewModel?.increaseQuantity() }
+        binding.removeQuantityButton.setOnClickListener { viewModel?.decreaseQuantity() }
     }
 
     override fun onDestroyView() {
