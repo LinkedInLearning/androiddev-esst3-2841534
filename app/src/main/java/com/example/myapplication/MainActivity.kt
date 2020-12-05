@@ -42,7 +42,14 @@ class MainActivity : FragmentActivity() {
     }
 
     private fun updateBadge(count: Int) {
-        TODO("implement the logic for showing and clearing badge count")
+        val badge = binding.bottomNavigation.getOrCreateBadge(R.id.action_shop)
+        if (count > 0) {
+            badge.number = count
+            badge.isVisible = true
+        } else {
+            badge.clearNumber()
+            badge.isVisible = false
+        }
     }
 
     private fun goToShop(): Boolean {
